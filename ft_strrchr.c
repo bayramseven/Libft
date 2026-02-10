@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 20:56:23 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/10 07:51:31 by bayram-seve      ###   ########.fr       */
+/*   Created: 2026/02/10 06:53:49 by bayram-seve       #+#    #+#             */
+/*   Updated: 2026/02/10 07:57:28 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	while (*s != '\0')
+	int	i;
+
+	i = 0;
+	// 1. Önce stringin sonuna (NULL'a) kadar git   BAYRAM
+	while (s[i] !='\0')
+		i++;
+	
+	// 2. Sondan başa doğru (geriye) gel
+	while (i >= 0)
 	{
-		if (*s == (char)c) // c aslında int , ama bu şekilde yalnızca binary de ilk 8 bitine bakıyor ve karşılaştırmayı tam yapabiliyor. chara dönüştürüyo gibi düşün
-			return ((char *)s); // const muhabbetini manipüle
-		s++;
+		if (s[i] == (char)c)
+			return ((char *)(s + i)); // Bulduğun an adresi döndür (char *) const charın kilidini kırdı
+		i--;
 	}
-	if ((char)c == '\0')
-		return ((char *)s); 
 	return (0);
 }
-	
-#include <stdio.h>
 
-int	main(void)
+int main()
 {
-printf("Sonuç: %s", ft_strchr("bayram", 'a'));
-
-	return (0);
+    printf("%s",ft_strrchr("bayram", 'a'));
+    return(0);
 }

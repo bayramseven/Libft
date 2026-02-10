@@ -29,10 +29,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%zu", ft_strlen("bayram"));
-}
