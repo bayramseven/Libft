@@ -6,7 +6,7 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:22:22 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/10 22:54:14 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/11 02:08:30 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	ch = (unsigned char)c;
 
 	i = 0;
-	while (i < n)
+	while (i < n !='\0')
 	{
 		// 3. Eşleşme var mı?
 		if (ptr[i] == ch)
 		{
 			// Bulduğumuz kutunun (byte'ın) ADRESİNİ döndür.
 			// (void *) casting'i, fonksiyonun dönüş tipi void* olduğu için.
-			return ((void *)&ptr[i]);
+			return ((void *)&ptr[i]); // buradaki void *  en son kılıf amaçlı kullanılıyor. çünkü senden ödngüde bunu istiyor. 
 		}
 		i++;
 	}

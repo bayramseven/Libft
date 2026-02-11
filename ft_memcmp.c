@@ -6,7 +6,7 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 22:54:33 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/10 22:59:37 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/11 01:59:20 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
+int main()
+{
+	char bay[]="bayram";
+	char sum[]="Bayram";
+
+	printf("%d\n",ft_memcmp(bay,sum,5));
+	return(0);
+}
