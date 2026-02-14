@@ -6,7 +6,7 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 04:13:21 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/10 05:36:48 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/14 10:17:46 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (src_len);
 }
 
+
+/*
 // --- TEST KISMI (MAIN) ---
 int	main(void)
 {
@@ -48,3 +50,5 @@ int	main(void)
 	printf("Dönen Değer    : %zu\n", sonuc);
 	return (0);
 }
+
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
+/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 19:33:19 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/11 01:50:13 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/11 19:52:59 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)  // sondan başa değişi
 		dest = (unsigned char *)dst;
 		srrc = (const unsigned char *)src;
 		
-		while (n > 0 !='\0')
+		while (n > 0)
 		{
 			n--; // Önce indeksi düşürüyoruz (Size 5 ise son indeks 4'tür)
 			dest[n] = srrc[n];
@@ -37,13 +37,11 @@ void	*ft_memmove(void *dst, const void *src, size_t n)  // sondan başa değişi
 	}
 	return (dst);
 }
-
-
 int main()
 {
     char kaynak[]="bayram";
-    char hedef[]="seven";
 
-    printf("%s\n",ft_memmove(kaynak,hedef,6));
+    printf("%s\n",(char *)ft_memmove(kaynak + 1,kaynak,4));
     return(0);
 }
+

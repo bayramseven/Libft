@@ -6,7 +6,7 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 16:11:48 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/11 01:52:56 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/13 23:25:53 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)  // sadece yazıyı sayı�
 	if (dst == NULL && src == NULL)
 		return (0);
 	i = 0;
-	while (i < n && i !='\0') 
+	while (i < n) 
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
@@ -27,11 +27,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)  // sadece yazıyı sayı�
 	return (dst);
 }
 
-int main()
-{
-    char dest[]="bayram";
-    char src[]="seven";
+// int main()
+// {
+//     char dest[]="bayram";
+//     char src[]="seven";
 
-    printf("%s",ft_memcpy(dest,src,4));
-    return(0);
-}
+//     printf("%s",ft_memcpy(dest,src,4));
+//     return(0);
+// }

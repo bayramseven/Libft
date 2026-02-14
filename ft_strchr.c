@@ -6,7 +6,7 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:56:23 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/10 07:51:31 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/14 10:17:31 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s); 
 	return (0);
 }
-	
+	/*
 #include <stdio.h>
 
 int	main(void)
@@ -33,3 +33,4 @@ printf("Sonuç: %s", ft_strchr("bayram", 'a'));
 
 	return (0);
 }
+	*/
