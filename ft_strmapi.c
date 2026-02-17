@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
+/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 03:07:29 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/17 03:11:20 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/17 14:43:27 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	// 1. GÜVENLİK KONTROLÜ
-	// Eğer s (string) veya f (fonksiyon) yoksa işlem yapma.
 	if (!s || !f)
 		return (NULL);
 
@@ -41,3 +39,75 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0'; // Stringi mühürle.
 	return (str);
 }
+
+
+char f(unsigned int i, char s)
+{
+	return(s-=32);
+}
+
+
+int main()
+{
+
+	const char *s= "bayram";
+	char *yeni;
+
+	yeni=ft_strmapi(s,f);
+
+	printf("%s", yeni);
+
+	free(yeni);
+//MNEMORY LEAK YİYORSUN FREE YAPMAYI UNUTMA ARTIK YETER!!!
+	return(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+char f(unsigned int i, char c)
+	{
+		return(c-=32);
+		
+	}
+
+int main()
+{
+
+	char const *s="bayram";
+	char *yeni ;
+
+	yeni= ft_strmapi(s,f);
+
+	printf("%s\n", yeni );
+
+	free(yeni);
+
+	return(0);
+}
+	*/

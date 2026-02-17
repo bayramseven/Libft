@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
+/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 22:59:53 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/11 02:09:32 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/17 18:12:55 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,12 @@ int	ft_atoi(const char *str)
 	// Sonucu işaretiyle çarp ve döndür
 	return (res * sign);
 }
+
+
+int main()
+{
+	
+	printf("%d",ft_atoi("   +3453")); //havuz atoisi ile farklı ona göre 
+	return(0);
+}  
+

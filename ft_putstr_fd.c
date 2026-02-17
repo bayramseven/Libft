@@ -1,49 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/14 10:59:33 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/17 14:17:12 by bayseven         ###   ########.fr       */
+/*   Created: 2026/02/17 15:00:55 by bayseven          #+#    #+#             */
+/*   Updated: 2026/02/17 15:36:07 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned int	i;
-
-	if (!s || !f)
+	if (!s || fd < 0)
 		return ;
 
-	i = 0;
-
-	while (s[i])
-	{
-		
-		(*f)(i, &s[i]);
-
-		i++;
-	}
+	write(fd, s, ft_strlen(s));
 }
 
-
-#include <stdio.h>
-
-void buyuk(unsigned int i,char *s)
+int main()
 {
-	*s-= 32;
-	i++;
-}
 
-int	main(void)
-{
-	char b[]= "merhaba";
+ft_putstr_fd("bayram", 0);
 
-	ft_striteri(b, buyuk);
-	printf("%s", b);
-	return (0);
+    return(0);
 }

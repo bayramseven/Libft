@@ -1,49 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/14 10:59:33 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/17 14:17:12 by bayseven         ###   ########.fr       */
+/*   Created: 2026/02/17 15:37:50 by bayseven          #+#    #+#             */
+/*   Updated: 2026/02/17 15:48:32 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// put end line
+
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
-
-	if (!s || !f)
+	// String yoksa veya dosya kapalıysa işlem yapma.
+	if (!s || fd < 0)
 		return ;
 
-	i = 0;
+	write(fd, s, ft_strlen(s));
 
-	while (s[i])
-	{
-		
-		(*f)(i, &s[i]);
-
-		i++;
-	}
+	write(fd, "\n", 1);
 }
 
-
-#include <stdio.h>
-
-void buyuk(unsigned int i,char *s)
+int main()
 {
-	*s-= 32;
-	i++;
-}
-
-int	main(void)
-{
-	char b[]= "merhaba";
-
-	ft_striteri(b, buyuk);
-	printf("%s", b);
-	return (0);
+    
+    ft_putendl_fd("bayram", 0);
+    ft_putendl_fd("seven", 0);
+    return(0);
 }
