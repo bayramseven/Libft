@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 22:59:53 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/18 20:30:53 by bayseven         ###   ########.fr       */
+/*   Created: 2026/02/18 16:49:14 by bayseven          #+#    #+#             */
+/*   Updated: 2026/02/18 21:58:33 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+t_list	*ft_lstnew(void *content)
 {
-	int	res;
-	int	sign;
-	int	i;
+	t_list	*new;
 
-	res = 0;
-	sign = 1;
-	i = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
+}
+
+
+
+int main()
+{
+
+	t_list *bayram;
+
+	bayram =ft_lstnew("SEVEN");
+
+	if(bayram)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		printf("%s\n",  (char *)bayram->content);
+		printf( "%p " , bayram->next);
+		free(bayram);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = (res * 10) + (str[i] - '0');
-		i++;
-	}
-	return (res * sign);
+
+	return(0);
 }
