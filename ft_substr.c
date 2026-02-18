@@ -6,7 +6,7 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 21:27:16 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/13 22:21:27 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/18 04:44:14 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
+/*
+
 int main(void)
 {
     // "Bayram" kelimesinin 3. harfinden başla, 3 tane al ("ram")
@@ -63,3 +65,4 @@ int main(void)
     }
     return (0);
 }
+	*/
