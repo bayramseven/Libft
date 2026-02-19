@@ -6,7 +6,7 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 18:31:02 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/19 01:45:40 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/19 05:56:11 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-
-/*
-int main()
-{
-	
-	t_list *baslangic=NULL;
-	t_list *vagon1;
-
-	vagon1= ft_lstnew("bayram");
-
-ft_lstadd_front(&baslangic,vagon1);
-printf("bas deger =%s", (char *)baslangic->content );
-	return(0);
-
-}
-	*/
-

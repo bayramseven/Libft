@@ -11,13 +11,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// verilen dizinin uzunluğunu bulan fankşın
-
 #include "libft.h"
-// Dönüş tipi 'size_t' olmalı (negatif olamayan tamsayı demek)
 size_t	ft_strlen(const char *s)
-// const char : biz s değişkenini kullanmayacağız sadece okuyacağız. harflerle oynanmaması için bunu kullanıyoruz.
-// char *s bana adrsi var ben okurumda yazarımda ;  const char bana adrsi ver sadece okurum asla değiştirmem diyor kısacası
 
 {
 	size_t i;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 15:00:55 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/17 15:36:07 by bayseven         ###   ########.fr       */
+/*   Updated: 2026/02/19 05:59:23 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,4 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 
 	write(fd, s, ft_strlen(s));
-}
-
-int main()
-{
-
-ft_putstr_fd("bayram", 0);
-
-    return(0);
 }

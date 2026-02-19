@@ -6,15 +6,13 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:36:03 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/18 02:57:26 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/19 05:55:49 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Yardımcı: Basamak sayısını hesaplar.
-// nb'yi long gönderdiğimiz için burası da long almalı.
-static int	ft_len(long n)// malloc için ne kadar yer ayıacağımıza burada karar veriyoruz. yani sayı kaç basamak // static ile sadece bu dosyanın içinden çağrılabilen bir fonksiyon yaptık ki libft.h yi bozmasın. 
+static int	ft_len(long n)
 {
 	int	len;
 
@@ -22,10 +20,10 @@ static int	ft_len(long n)// malloc için ne kadar yer ayıacağımıza burada ka
 	if (n == 0)
 		return (1);
 	if (n < 0)
-		len = 1; // Eksi işareti için +1 yer ayırıyoruz..
+		len = 1; 
 	while (n != 0)
 	{
-		n = n / 10; // misal 55; 55/10 =5 --> kalan 5 için 5/10= 0. çünkü int tam sayı ve bölerken 0 a yuvarlar virgüllü yani float değişkeni gibi yapmaz.
+		n = n / 10; 
 		len++;
 	}
 	return (len);
@@ -34,35 +32,26 @@ static int	ft_len(long n)// malloc için ne kadar yer ayıacağımıza burada ka
 char	*ft_itoa(int n)
 {
 	char	*str;
-	long	nb; //int sınırları -2147483648 ile 2147483647 arasındadır. Eğer bana INT_MIN gelirse ve ben onu pozitife çevirmek için -n yaparsam, int bunu taşıyamaz (overflow olur). Bu yüzden sayıyı daha geniş bir kap olan long içine alarak güvenliğe kavuşturdum.
+	long	nb; 
 	int		len;
 
-	nb = n;             // 1. Taşmayı önlemek için long kasaya al
-	len = ft_len(nb);   // 2. Uzunluğu hesapla
-	str = (char *)malloc(sizeof(char) * (len + 1)); // 3. Yer aç
+	nb = n;             
+	len = ft_len(nb);  
+	str = (char *)malloc(sizeof(char) * (len + 1)); 
 	if (!str)
 		return (NULL);
-	str[len--] = '\0';  // 4. En sona \0 koy ve bir geri gel
+	str[len--] = '\0';  
 	if (nb == 0)
 		str[0] = '0';
-	else if (nb < 0)    // 5. Negatifse...
+	else if (nb < 0)    
 	{
-		str[0] = '-';   // ...başa eksi koy
-		nb = -nb;       // ...sayıyı pozitife çevir
+		str[0] = '-';   
+		nb = -nb;       
 	}
-	while (nb > 0)      // 6. Sondan başa doldur
+	while (nb > 0)     
 	{
 		str[len--] = (nb % 10) + '0';
 		nb = nb / 10;
 	}
 	return (str);
-}
-
-int main()
-{
-
-    printf("%s",ft_itoa(-33)); //int to ascii
-    
-
-    return(0);
 }

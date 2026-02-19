@@ -6,7 +6,7 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 04:13:21 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/14 10:17:46 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/19 06:03:17 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {	
-	size_t	src_len; //kaynak uzunluğu
+	size_t	src_len; 
 	size_t	i; 
 
 	src_len = 0;
@@ -33,22 +33,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
-
-
-/*
-// --- TEST KISMI (MAIN) ---
-int	main(void)
-{
-	char dest[7];
-	char *src="bayram";
-	size_t sonuc = ft_strlcpy(dest,src,3);
-
-
-
-	printf("Orijinal Metin : %s\n", src);
-	printf("Kopyalanan     : %s\n", dest);
-	printf("Dönen Değer    : %zu\n", sonuc);
-	return (0);
-}
-
-*/

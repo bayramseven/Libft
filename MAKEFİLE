@@ -6,18 +6,16 @@
 #    By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/19 05:46:32 by bayram-seve       #+#    #+#              #
-#    Updated: 2026/02/19 05:46:52 by bayram-seve      ###   ########.fr        #
+#    Updated: 2026/02/19 06:06:14 by bayram-seve      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
-# -Wunused bayrağını subjectinde özellikle istemiyorlarsa kaldırabilirsin, 
-# ama normda hata vermez.
 CFLAGS = -Wall -Wextra -Werror
 
-# Tüm fonksiyonlarını buraya, alfabetik veya kategorize ederek diziyoruz
+
 SRCS = ft_atoi.c ft_isprint.c ft_lstlast.c ft_memmove.c ft_strdup.c \
 	   ft_strncmp.c ft_bzero.c ft_itoa.c ft_lstmap.c ft_memset.c \
 	   ft_striteri.c ft_strnstr.c ft_calloc.c ft_lstadd_back.c ft_lstnew.c \
@@ -32,11 +30,9 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-# Kütüphaneyi oluşturma kuralı
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
-# Nesne dosyalarını (.o) derleme kuralı (Relink'i önlemek için önemli)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 

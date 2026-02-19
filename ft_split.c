@@ -6,17 +6,17 @@
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 02:49:04 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/18 06:05:01 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/19 05:59:57 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// 1. YARDIMCI: Kelime Sayısını Bulur
-static int	count_words(const char *s, char c) // meslea *s= bayram , seven , sude , sumru , sivri; --> c= , ; 
+
+static int	count_words(const char *s, char c) 
 {
-	int	count; // sayaç
-	int	in_word; // kelimenin içinde mi dışında mı  içinde ise 1 değil ie 0 
+	int	count; 
+	int	in_word; 
 
 	count = 0;
 	in_word = 0;
@@ -34,7 +34,6 @@ static int	count_words(const char *s, char c) // meslea *s= bayram , seven , sud
 	return (count);
 }
 
-// 2. YARDIMCI: Hata Durumunda Belleği Temizler (Leak Önleyici)
 static char	**free_array(char **array, int i)
 {
 	while (i > 0)
@@ -46,7 +45,6 @@ static char	**free_array(char **array, int i)
 	return (NULL);
 }
 
-// 3. YARDIMCI: Kelimeleri Ayırıp Diziye Doldurur
 static char	**fill_array(char const *s, char c, char **array)
 {
 	int	i;
@@ -75,7 +73,7 @@ static char	**fill_array(char const *s, char c, char **array)
 	return (array);
 }
 
-// ANA FONKSİYON
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
@@ -86,25 +84,4 @@ char	**ft_split(char const *s, char c)
 	if (!array)
 		return (NULL);
 	return (fill_array(s, c, array));
-}
-
-int main(void)
-{
-    char **res; // 1. Adres listesini tutacak değişken
-    int i = 0;
-
-    // 2. Fonksiyonu çağır ve sonucu bir yere ata
-    res = ft_split("bayram,seven,42", ',');
-    if (!res) // Güvenlik kontrolü (Hoca bunu sever)
-        return (1);
-
-    // 3. NULL görene kadar yazdır ve temizle
-    while (res[i]) // res[i] != NULL ile aynı şeydir
-    {
-        printf("Kelime %d: %s\n", i, res[i]);
-        free(res[i]); // İşimiz biten kelimeyi hemen siliyoruz
-        i++;
-    }
-    free(res); // En son ana listeyi siliyoruz
-    return (0);
 }
