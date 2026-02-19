@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 19:33:19 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/19 13:55:42 by bayseven         ###   ########.fr       */
+/*   Created: 2026/02/19 13:53:45 by bayseven          #+#    #+#             */
+/*   Updated: 2026/02/19 14:04:57 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	unsigned char		*dest;
-	const unsigned char	*srrc;
+	t_list	*temp;
 
-	if (!dst && !src)
-		return (0);
-	if (dst > src)
+	temp = lst;
+	if (!lst)
+		return (NULL);
+	while (temp->next != NULL)
 	{
-		dest = (unsigned char *)dst;
-		srrc = (const unsigned char *)src;
-		while (n > 0)
-		{
-			n--;
-			dest[n] = srrc[n];
-		}
+		temp = temp->next;
 	}
-	else
-	{
-		ft_memcpy(dst, src, n);
-	}
-	return (dst);
+	return (temp);
 }

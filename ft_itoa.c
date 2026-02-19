@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
+/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 16:36:03 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/19 05:55:49 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/19 13:52:47 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ static int	ft_len(long n)
 	if (n == 0)
 		return (1);
 	if (n < 0)
-		len = 1; 
+		len = 1;
 	while (n != 0)
 	{
-		n = n / 10; 
+		n = n / 10;
 		len++;
 	}
 	return (len);
@@ -32,23 +32,23 @@ static int	ft_len(long n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	long	nb; 
+	long	nb;
 	int		len;
 
-	nb = n;             
-	len = ft_len(nb);  
-	str = (char *)malloc(sizeof(char) * (len + 1)); 
+	nb = n;
+	len = ft_len(nb);
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	str[len--] = '\0';  
+	str[len--] = '\0';
 	if (nb == 0)
 		str[0] = '0';
-	else if (nb < 0)    
+	else if (nb < 0)
 	{
-		str[0] = '-';   
-		nb = -nb;       
+		str[0] = '-';
+		nb = -nb;
 	}
-	while (nb > 0)     
+	while (nb > 0)
 	{
 		str[len--] = (nb % 10) + '0';
 		nb = nb / 10;

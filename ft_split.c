@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
+/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 02:49:04 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/19 05:59:57 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/19 13:55:57 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-static int	count_words(const char *s, char c) 
+static int	count_words(const char *s, char c)
 {
-	int	count; 
-	int	in_word; 
+	int	count;
+	int	in_word;
 
 	count = 0;
 	in_word = 0;
@@ -72,7 +71,6 @@ static char	**fill_array(char const *s, char c, char **array)
 	array[word_index] = NULL;
 	return (array);
 }
-
 
 char	**ft_split(char const *s, char c)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
+/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 20:56:23 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/19 06:00:37 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/19 13:56:08 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
 	{
-		if (*s == (char)c) 
-			return ((char *)s); 
+		if (*s == (char)c)
+			return ((char *)s);
 		s++;
 	}
 	if ((char)c == '\0')
-		return ((char *)s); 
+		return ((char *)s);
 	return (0);
 }
-	

@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
+/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 05:10:45 by bayram-seve       #+#    #+#             */
-/*   Updated: 2026/02/19 05:56:34 by bayram-seve      ###   ########.fr       */
+/*   Updated: 2026/02/19 13:53:15 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 

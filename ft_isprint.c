@@ -6,7 +6,7 @@
 /*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:56:00 by bayseven          #+#    #+#             */
-/*   Updated: 2026/01/22 15:11:33 by bayseven         ###   ########.fr       */
+/*   Updated: 2026/02/19 13:50:42 by bayseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 33 && c <= 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
