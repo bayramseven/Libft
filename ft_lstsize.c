@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 18:31:02 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/19 01:45:40 by bayram-seve      ###   ########.fr       */
+/*   Created: 2026/02/19 01:18:23 by bayram-seve       #+#    #+#             */
+/*   Updated: 2026/02/19 05:49:37 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_lstadd_front(t_list **lst, t_list *new)
+          // temp geçici demek
+int	ft_lstsize(t_list *lst)
 {
-	if (!new || !lst)
-		return ;
-	new->next = *lst;
-	*lst = new;
+	t_list	*temp;
+	size_t	i;
+
+	temp = lst;
+	i = 0;
+	while (temp != NULL)
+	{
+		i++;
+		temp = temp->next;
+	}
+	return (i);
 }
 
 /*
+
 int main()
 {
-	
-	t_list *baslangic=NULL;
-	t_list *vagon1;
+    t_list *baslangic;
+    int boyut;
 
-	vagon1= ft_lstnew("bayram");
+    baslangic=ft_lstnew("vagpn1");
+    ft_lstadd_front(&baslangic,ft_lstnew("vagpn2"));
+    ft_lstadd_front(&baslangic,ft_lstnew("vagpn3"));
 
-ft_lstadd_front(&baslangic,vagon1);
-printf("bas deger =%s", (char *)baslangic->content );
-	return(0);
-
+    boyut=ft_lstsize(baslangic);
+    printf("toplam boyut=%d", boyut);
+    return(0);
 }
-	*/
-
+    */

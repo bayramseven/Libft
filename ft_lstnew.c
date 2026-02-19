@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bayseven <bayseven@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: bayram-seven <bayram-seven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:49:14 by bayseven          #+#    #+#             */
-/*   Updated: 2026/02/18 21:58:33 by bayseven         ###   ########.fr       */
+/*   Updated: 2026/02/19 05:49:21 by bayram-seve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstnew(void *content)
 }
 
 
-
+/*
 int main()
 {
 
@@ -42,3 +42,5 @@ int main()
 
 	return(0);
 }
+
+*/
